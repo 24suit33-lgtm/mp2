@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shiny Gems Jewelry</title>
+    <style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        body {
+            background: #fff8f0;
+            color: #333;
+        }
+        header {
+            background: #c49b63;
+            color: white;
+            text-align: center;
+            padding: 25px 10px;
+            font-size: 2em;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #e6c9a8;
+            padding: 10px;
+            gap: 20px;
+        }
+        nav a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        nav a:hover {
+            color: #ffe6cc;
+        }
+        section {
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .product-card {
+            display: inline-block;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+            margin: 20px;
+            max-width: 250px;
+            transition: transform 0.3s;
+        }
+        .product-card:hover {
+            transform: translateY(-10px) scale(1.05);
+        }
+        .product-card img {
+            width: 100%;
+            border-top-left-radius: 12px;
+            border-top-right-radius: 12px;
+        }
+        .product-card h3 {
+            margin: 10px 0;
+            font-size: 1.2em;
+        }
+        .product-card p {
+            padding: 0 10px 10px 10px;
+            font-size: 0.95em;
+        }
+        button {
+            background: #c49b63;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        button:hover {
+            background: #a67c52;
+        }
+        footer {
+            background: #c49b63;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+        input {
+            padding: 8px 10px;
+            margin: 10px;
+            border-radius: 5px;
+            border: 1px solid #c49b63;
+        }
+    </style>
+</head>
+<body>
+
+<header>💎 Shiny Gems Jewelry 💎</header>
+
+<nav>
+    <a href="#products">Products</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<section id="products">
+    <h2>Our Featured Jewelry</h2>
+    <div class="product-card">
+        <img src="Golden Ring.jpg" alt="Golden Ring">
+        <h3>Golden Ring</h3>
+        <p>Elegant gold ring with intricate design perfect for every occasion.</p>
+        <button onclick="addToCart('Golden Ring')">Add to Cart 🛒</button>
+    </div>
+    <div class="product-card">
+        <img src="Silver Necklace.jpg" alt="Silver Necklace">
+        <h3>Silver Necklace</h3>
+        <p>Stylish silver necklace to elevate your look instantly.</p>
+        <button onclick="addToCart('Silver Necklace')">Add to Cart 🛒</button>
+    </div>
+    <div class="product-card">
+        <img src="Diamond Earrings.jpg" alt="Diamond Earrings">
+        <h3>Diamond Earrings</h3>
+        <p>Shimmering diamond earrings that shine with sophistication.</p>
+        <button onclick="addToCart('Diamond Earrings')">Add to Cart 🛒</button>
+    </div>
+</section>
+
+<section id="about">
+    <h2>About Us</h2>
+    <p>At Shiny Gems Jewelry, we craft exquisite pieces that blend elegance and style. Each piece is carefully designed to make you feel special and shine bright in every moment.</p>
+</section>
+
+<section id="contact">
+    <h2>Contact Us</h2>
+    <p>Have questions or want to place a custom order? Reach out to us!</p>
+    <input type="text" id="name" placeholder="Your Name">
+    <input type="email" id="email" placeholder="Your Email">
+    <button onclick="submitContact()">Submit</button>
+</section>
+
+<footer>
+    &copy; 2025 Shiny Gems Jewelry | All Rights Reserved
+</footer>
+
+<script>
+    function addToCart(productName) {
+        alert(`✅ "${productName}" has been added to your cart!`);
+    }
+
+    function submitContact() {
+        const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim();
+        if(name && email){
+            alert(`Thank you, ${name}! We will contact you at ${email}.`);
+        } else {
+            alert('Please enter both your name and email.');
+        }
+    }
+</script>
+
+</body>
+</html>
